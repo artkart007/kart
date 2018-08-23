@@ -3,17 +3,13 @@ package com.art.kart.ctrl;
 import com.art.kart.model.Arts;
 import com.art.kart.service.ArtsService;
 import com.art.kart.service.UsersService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
@@ -42,10 +38,10 @@ public class ArtsController {
     @Autowired
     private UsersService usersService;
 
-    @GetMapping
-    public Flux<Arts> findAll() {
+    @GetMapping("/findByUserId/{userId}")
+    public Flux<Arts> findByUserId(@PathVariable String userId) {
         log.debug("findAll Arts");
-        return artsService.findAll();
+        return artsService.findByUserId(userId);
     }
 
     @GetMapping("/find")
@@ -85,16 +81,9 @@ public class ArtsController {
         try {
            if(usersService.findOne(userId).flux().toStream().count() > 0) {
 
-               saveUploadedFiles(Arrays.asList(uploadfile));
+               saveUploadedFiles(Arrays.asList(uploadfile) , customName, description, userId);
 
-               Arts arts = new Arts();
-               arts.setCustomName(customName);
-               arts.setDescription(description);
-               arts.setUserId(userId);
-               arts.setOriginalFileName(uploadfile.getOriginalFilename());
-               artsService.createArts(arts).subscribe().dispose();
-
-               return new ResponseEntity(artsService.findAll().toStream().toArray() , HttpStatus.CREATED);
+               return new ResponseEntity(artsService.findByUserId(userId).toStream().toArray(), HttpStatus.CREATED);
 
            }else {
                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -107,7 +96,7 @@ public class ArtsController {
 
     }
     //save file
-    private void saveUploadedFiles(List<MultipartFile> files) throws IOException {
+    private void saveUploadedFiles(List<MultipartFile> files, String customName, String description, String userId) throws IOException {
 
         for (MultipartFile file : files) {
 
@@ -115,12 +104,29 @@ public class ArtsController {
                 continue; //next pls
             }
 
-            byte[] bytes = file.getBytes();
-            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-            Files.write(path, bytes);
+            writeAndSaveFile(file, customName, description, userId);
 
         }
 
+    }
+
+    private void writeAndSaveFile(MultipartFile file, String customName, String description, String userId) throws IOException {
+        String extension = "." + FilenameUtils.getExtension(file.getOriginalFilename());
+
+
+        Arts arts = new Arts();
+        arts.setCustomName(customName);
+        arts.setDescription(description);
+        arts.setUserId(userId);
+        arts.setExtension(extension);
+        arts.setOriginalFileName(file.getOriginalFilename());
+        Mono<Arts> artsCreated = artsService.createArts(arts);
+
+        artsCreated.subscribe().dispose();
+
+        byte[] bytes = file.getBytes();
+        Path path = Paths.get(UPLOADED_FOLDER + artsCreated.block().getId() + extension);
+        Files.write(path, bytes);
     }
 
     @DeleteMapping("/{id}")

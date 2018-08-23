@@ -49,4 +49,9 @@ public class ArtsServiceImpl implements ArtsService {
     public Mono<Void> deleteAll() {
         return artsRepository.deleteAll();
     }
+
+    @Override
+    public Flux<Arts> findByUserId(String userId) {
+        return artsRepository.findByUserId(userId);
+    }
 }

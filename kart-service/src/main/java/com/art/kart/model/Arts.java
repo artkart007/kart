@@ -18,6 +18,8 @@ public class Arts extends BaseEntity {
 
     private String description;
 
+    private String extension;
+
     @Indexed
     private String userId;
 
@@ -52,5 +54,13 @@ public class Arts extends BaseEntity {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getExtension() {
+        return extension;
+    }
+
+    public void setExtension(String extension) {
+        this.extension = extension;
     }
 }

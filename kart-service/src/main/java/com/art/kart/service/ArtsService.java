@@ -20,4 +20,6 @@ public interface ArtsService {
     Mono<Arts> updateArts(Arts arts, String id);
 
     Mono<Void> deleteAll();
+
+    Flux<Arts> findByUserId(String userId);
 }
