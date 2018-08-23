@@ -1,0 +1,14 @@
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/service/UsersService.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/model/BaseEntity.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/impl/ArtsServiceImpl.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/model/Arts.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/KartApplication.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/config/StaticResourceConfiguration.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/impl/UsersServiceImpl.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/repo/UsersRepository.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/service/ArtsService.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/ctrl/ArtsController.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/config/SwaggerConfig.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/model/Users.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/ctrl/RouteController.java
+/home/mata/Documents/kart/kart-service/src/main/java/com/art/kart/repo/ArtsRepository.java
