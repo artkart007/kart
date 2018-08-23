@@ -1,0 +1,22 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+kart-ui/node_modules
+
+# testing
+kart-ui/coverage
+
+# production
+kart-ui/build
+
+# misc
+kart-ui/.DS_Store
+kart-ui/.env.local
+kart-ui/.env.development.local
+kart-ui/.env.test.local
+kart-ui/.env.production.local
+
+kart-ui/npm-debug.log*
+kart-ui/yarn-debug.log*
+kart-ui/yarn-error.log*
+kart-ui/package-lock.json
