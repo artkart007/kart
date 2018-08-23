@@ -7,6 +7,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -68,10 +69,10 @@ public class ArtsController {
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<?> uploadFile(
-            @RequestParam("userId")  String userId,
-            @RequestParam("customName")  String customName,
-            @RequestParam("description") String description,
-            @RequestParam("file") MultipartFile uploadfile) {
+          @RequestParam(value = "userId", required = true)  String userId,
+            @RequestParam(value ="customName", required = true)  String customName,
+            @RequestParam(value ="description", required = true) String description,
+            @RequestParam(value ="file", required = true) MultipartFile uploadfile) {
 
 
         if (uploadfile.isEmpty()) {
@@ -122,7 +123,7 @@ public class ArtsController {
         arts.setOriginalFileName(file.getOriginalFilename());
         Mono<Arts> artsCreated = artsService.createArts(arts);
 
-        artsCreated.subscribe().dispose();
+//        artsCreated.subscribe().dispose();
 
         byte[] bytes = file.getBytes();
         Path path = Paths.get(UPLOADED_FOLDER + artsCreated.block().getId() + extension);
