@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e65c823-3656-4da9-ac19-eccfba471b0d" name="Default Changelist" comment="" />
+    <list default="true" id="1e65c823-3656-4da9-ac19-eccfba471b0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/KartApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/KartApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/config/StaticResourceConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/config/StaticResourceConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/ctrl/ArtsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/ctrl/ArtsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/impl/ArtsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/impl/ArtsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/impl/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/impl/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/model/Arts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/model/Arts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/model/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/model/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/model/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/repo/ArtsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/repo/ArtsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/repo/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/repo/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/service/ArtsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/service/ArtsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/art/kart/service/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/art/kart/service/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kart-ui/src/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../kart-ui/src/env.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +139,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
           <entry key="jpg" value="2" />
           <entry key="properties" value="1" />
           <entry key="xml" value="1" />
@@ -122,7 +149,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -131,14 +158,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/ctrl/ArtsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="73" column="84" lean-forward="true" selection-start-line="73" selection-start-column="84" selection-end-line="73" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -146,8 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -173,8 +197,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/Arts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="33" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="84">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="e#489#490#0" expanded="true" />
                 <element signature="e#522#523#0" expanded="true" />
@@ -192,9 +216,25 @@
                 <element signature="e#1054#1055#0" expanded="true" />
                 <element signature="e#1098#1099#0" expanded="true" />
                 <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
                 <element signature="e#1233#1234#0" expanded="true" />
                 <element signature="e#1283#1284#0" expanded="true" />
                 <element signature="e#1325#1326#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -295,9 +335,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/art/kart/service/ArtsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/art/kart/model/BaseEntity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/art/kart/model/Arts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/art/kart/ctrl/ArtsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -335,6 +375,48 @@
               <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="kart-service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kart" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kart-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kart-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -351,7 +433,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535026405408" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535031821838" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -577,19 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -671,20 +740,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/5b7e996f2648941d29ad3413.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/upload/5b7ea22e264894260cacff99.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/ctrl/ArtsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/Arts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="33" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="84">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="e#489#490#0" expanded="true" />
             <element signature="e#522#523#0" expanded="true" />
@@ -702,6 +781,7 @@
             <element signature="e#1054#1055#0" expanded="true" />
             <element signature="e#1098#1099#0" expanded="true" />
             <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
             <element signature="e#1233#1234#0" expanded="true" />
             <element signature="e#1283#1284#0" expanded="true" />
             <element signature="e#1325#1326#0" expanded="true" />
@@ -709,15 +789,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/5b7ea22e264894260cacff99.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/ctrl/ArtsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/art/kart/model/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="73" column="84" lean-forward="true" selection-start-line="73" selection-start-column="84" selection-end-line="73" selection-end-column="84" />
+        <state relative-caret-position="42">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
           </folding>
         </state>
       </provider>
