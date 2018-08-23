@@ -117,11 +117,11 @@ export default class Upload extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="artDescription">Art Description</label>
-              <textarea onChange={this.onTextAreaChange} type="text" className="form-control" id="artDescription" placeholder="Enter description" />
+              <textarea  value={this.state.description}  onChange={this.onTextAreaChange} type="text" className="form-control" id="artDescription" placeholder="Enter description" />
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputFile">Art File input</label>
-              <input onChange={this.onChange} className="btn btn-default" type="file" id="exampleInputFile" />
+              <input   onChange={this.onChange} className="btn btn-default" type="file" id="exampleInputFile" />
               <p className="help-block">Use image files only</p>
             </div>
             <button type="submit" className="btn btn-primary">Upload</button>
@@ -152,7 +152,7 @@ export default class Upload extends React.Component {
                     </div>
                     <div className="col-md-10">
                       <a href={imageUrl}>
-                      <img width="30px" alt={response.originalFileName} src={imageUrl} />
+                      <img width="30px" alt="Missing" src={imageUrl} />
                   </a>
                     </div>
                   </div>
