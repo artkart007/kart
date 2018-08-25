@@ -7,6 +7,7 @@
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/ctrl/RouteController.java
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/impl/ArtsServiceImpl.java
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/model/Users.java
+/home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/ctrl/UsersController.java
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/model/Arts.java
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/service/ArtsService.java
 /home/mata/Documents/git/kart/kart-service/src/main/java/com/art/kart/ctrl/ArtsController.java

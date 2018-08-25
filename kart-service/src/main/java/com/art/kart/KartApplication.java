@@ -1,5 +1,6 @@
 package com.art.kart;
 
+import com.art.kart.model.Users;
 import com.art.kart.service.ArtsService;
 import com.art.kart.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,16 +29,18 @@ public class KartApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         //db clean up
-//		artsService.deleteAll().subscribe().dispose();
-//		usersService.deleteAll().subscribe().dispose();
-//
-//		Users users = new Users();
-//		users.setUsername("vishnu007");
-//		usersService.save(users).subscribe().dispose();
-//
-//		users = new Users();
-//		users.setUsername("pappu007");
-//		usersService.save(users).subscribe().dispose();
+		artsService.deleteAll().subscribe().dispose();
+		usersService.deleteAll().subscribe().dispose();
+
+		Users users = new Users();
+		users.setUsername("vishnu007");
+		users.setFullName("Vishnu Kulkarni");
+		usersService.save(users).subscribe().dispose();
+
+		users = new Users();
+		users.setUsername("pappu007");
+        users.setFullName("Pappu Kumar");
+        usersService.save(users).subscribe().dispose();
 
 
     }
