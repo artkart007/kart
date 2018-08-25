@@ -5,6 +5,7 @@ import com.art.kart.repo.UsersRepository;
 import com.art.kart.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -15,7 +16,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public Mono<Void> deleteAll() {
-       return usersRepository.deleteAll();
+        return usersRepository.deleteAll();
     }
 
     @Override
@@ -26,5 +27,10 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public Mono<Users> findOne(String userId) {
         return usersRepository.findById(userId);
+    }
+
+    @Override
+    public Flux<Users> findAll() {
+        return usersRepository.findAll();
     }
 }

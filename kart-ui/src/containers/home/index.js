@@ -8,10 +8,12 @@ import {
   decrement,
   decrementAsync
 } from '../../modules/counter'
-
+import './index.css';
+import spiral from './spiral.svg'
 const Home = props => (
   <div>
-    <h1>Home</h1>
+    <img alt="svg" src={spiral}></img>
+    {/* <h1>Home</h1>
     <p>Count: {props.count}</p>
 
     <p>
@@ -32,7 +34,7 @@ const Home = props => (
       <button onClick={() => props.changePage()}>
         Go to about page via redux
       </button>
-    </p>
+    </p> */}
   </div>
 )
 

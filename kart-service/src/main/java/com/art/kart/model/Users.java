@@ -11,6 +11,8 @@ public class Users extends BaseEntity {
     @Indexed
     private String username;
 
+    private String fullName;
+
     public String getUsername() {
         return username;
     }

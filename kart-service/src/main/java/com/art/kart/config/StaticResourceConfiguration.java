@@ -10,13 +10,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class StaticResourceConfiguration extends WebMvcConfigurerAdapter {
 
     @Value("${UPLOADED_FOLDER}")
-    private String UPLOADED_FOLDER ;
+    private String UPLOADED_FOLDER;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
-        System.out.println("UPLOADED_FOLDER"+UPLOADED_FOLDER);
-        registry.addResourceHandler("/images/**").addResourceLocations("file:"+UPLOADED_FOLDER);
+        System.out.println("UPLOADED_FOLDER" + UPLOADED_FOLDER);
+        registry.addResourceHandler("/images/**").addResourceLocations("file:" + UPLOADED_FOLDER);
     }
 
     @Override

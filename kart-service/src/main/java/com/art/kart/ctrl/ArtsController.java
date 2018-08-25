@@ -7,7 +7,6 @@ import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +14,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,11 +27,9 @@ import java.util.List;
 @RequestMapping("/api/v1/arts")
 public class ArtsController {
 
-    @Value("${UPLOADED_FOLDER}")
-    private String UPLOADED_FOLDER ;
-
     Logger log = LoggerFactory.getLogger(this.getClass());
-
+    @Value("${UPLOADED_FOLDER}")
+    private String UPLOADED_FOLDER;
     @Autowired
     private ArtsService artsService;
 
@@ -69,10 +67,12 @@ public class ArtsController {
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<?> uploadFile(
-          @RequestParam(value = "userId", required = true)  String userId,
-            @RequestParam(value ="customName", required = true)  String customName,
-            @RequestParam(value ="description", required = true) String description,
-            @RequestParam(value ="file", required = true) MultipartFile uploadfile) {
+            @RequestParam(value = "userId", required = true) String userId,
+            @RequestParam(value = "customName", required = true) String customName,
+            @RequestParam(value = "description", required = true) String description,
+            @RequestParam(value = "price", required = true) Double price,
+            @RequestParam(value = "currency", required = true) String currency,
+            @RequestParam(value = "file", required = true) MultipartFile uploadfile) {
 
 
         if (uploadfile.isEmpty()) {
@@ -80,24 +80,25 @@ public class ArtsController {
         }
 
         try {
-           if(usersService.findOne(userId).flux().toStream().count() > 0) {
+            if (usersService.findOne(userId).flux().toStream().count() > 0) {
 
-               saveUploadedFiles(Arrays.asList(uploadfile) , customName, description, userId);
+                saveUploadedFiles(Arrays.asList(uploadfile), customName, description, userId, price, currency);
 
-               return new ResponseEntity(artsService.findByUserId(userId).toStream().toArray(), HttpStatus.CREATED);
+                return new ResponseEntity(artsService.findByUserId(userId).toStream().toArray(), HttpStatus.CREATED);
 
-           }else {
-               return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            } else {
+                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 
-           }
+            }
         } catch (IOException e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
 
     }
+
     //save file
-    private void saveUploadedFiles(List<MultipartFile> files, String customName, String description, String userId) throws IOException {
+    private void saveUploadedFiles(List<MultipartFile> files, String customName, String description, String userId, Double price, String currency) throws IOException {
 
         for (MultipartFile file : files) {
 
@@ -105,13 +106,13 @@ public class ArtsController {
                 continue; //next pls
             }
 
-            writeAndSaveFile(file, customName, description, userId);
+            writeAndSaveFile(file, customName, description, userId, price, currency);
 
         }
 
     }
 
-    private void writeAndSaveFile(MultipartFile file, String customName, String description, String userId) throws IOException {
+    private void writeAndSaveFile(MultipartFile file, String customName, String description, String userId, Double price, String currency) throws IOException {
         String extension = "." + FilenameUtils.getExtension(file.getOriginalFilename());
 
 
@@ -121,6 +122,8 @@ public class ArtsController {
         arts.setUserId(userId);
         arts.setExtension(extension);
         arts.setOriginalFileName(file.getOriginalFilename());
+        arts.setCurrency(currency);
+        arts.setPrice(price);
         Mono<Arts> artsCreated = artsService.createArts(arts);
 
 //        artsCreated.subscribe().dispose();

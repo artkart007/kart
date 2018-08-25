@@ -1,5 +1,5 @@
 export const config = {
-    env: 'prod'
+    env: ''
 }
 
 
