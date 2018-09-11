@@ -12,5 +12,4 @@ cd $kart_ui_path && yarn && yarn build && cp -r build/* "$kart_service_path/src/
 cd $kart_service_path && ./mvnw clean package
 
 #start app
-
-cd $kart_service_path && nohup java -jar target/kart-0.0.1-SNAPSHOT.jar &
+cd $kart_service_path && java -jar target/kart-0.0.1-SNAPSHOT.jar 
