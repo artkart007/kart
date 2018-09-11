@@ -16,4 +16,4 @@ sleep 5
 #start app
 cd $kart_service_path && nohup java -jar target/kart-0.0.1-SNAPSHOT.jar &
 
-sleep 5 
+sleep 25 
